@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: hystrixdashboard
+  cloud:
+    config:
+      enabled: false
+      server:
+        bootstrap: true
