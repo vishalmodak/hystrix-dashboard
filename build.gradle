@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '1.2.3.RELEASE'
+        springBootVersion = '1.3.0.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -32,11 +32,13 @@ springBoot {
     requiresUnpack = ['com.netflix.eureka:eureka-core','com.netflix.eureka:eureka-client']
 }
 
+def springCloudVersion = '1.0.3.RELEASE'
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile 'org.springframework.cloud:spring-cloud-starter-hystrix:1.0.0.RELEASE'
-    compile 'org.springframework.cloud:spring-cloud-starter-hystrix-dashboard:1.0.0.RELEASE'
+    compile "org.springframework.cloud:spring-cloud-starter-hystrix:${springCloudVersion}"
+    compile "org.springframework.cloud:spring-cloud-starter-hystrix-dashboard:${springCloudVersion}"
 
     testCompile("org.springframework.boot:spring-boot-starter-test") 
 }
